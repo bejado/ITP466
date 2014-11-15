@@ -16,6 +16,12 @@
 
     <!-- Include the compiled Ratchet JS -->
     <script src="js/ratchet.js"></script>
+	<style>
+	.slide > img {
+	width:375px;
+	height: 667px;
+	}
+</style>	
   </head>
   <body>
 
@@ -26,10 +32,10 @@
 
     <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
     <div class="content">
-      <div class="slider" id="mySlider">
-  <div class="slide-group">
+          <div id="iwindow"><div class="slider" id="mySlider">
+  <div class="slide-group" style="-webkit-transition: 0.2s; transition: 0.2s; -webkit-transform: translate3d(-642px, 0px, 0px);">
     <div class="slide">
-      <img src="http://goratchet.com/assets/img/slide-1.jpg" width=">
+      <img src="http://goratchet.com/assets/img/slide-1.jpg">
       <span class="slide-text">
         <span class="icon icon-left-nav"></span>
         Slide me
@@ -43,7 +49,8 @@
     </div>
   </div>
 </div>
-    </div>
+</div>
+        </div>
     
     <!-- Icons in standard bar fixed to the bottom of the screen -->
     <div class="bar bar-standard bar-footer">
