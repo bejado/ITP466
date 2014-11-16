@@ -16,8 +16,34 @@
 
     <!-- Include the compiled Ratchet JS -->
     <script src="js/ratchet.js"></script>
+<script src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/iscroll.js"></script>
+	<script type="text/javascript">
+	var myScroll;
+	function loaded() {
+		var myScroll = new IScroll('#mySlider');
+	}
+	</script>
+
+	<style>
+	.slide .bottomimage {
+		top:0px !important; 
+		left:0 !important;
+		width:100% !important;
+	}
+	.slide .topimage {
+		top:-579px !important; 
+		left:0 !important;
+		width:100% !important;
+	}
+	
+	#mySlider {
+		position:relative;
+	}
+	
+	</style>
   </head>
-  <body>
+  <body onload="loaded();">
 
     <!-- Make sure all your bars are the first things in your <body> -->
     <header class="bar bar-nav">
@@ -30,13 +56,12 @@
 
       <div id="iwindow">
         <div class="slider" id="mySlider">
-          <div class="slide-group" style="-webkit-transition: 0.2s; transition: 0.2s; -webkit-transform: translate3d(-642px, 0px, 0px);">
-            <div class="slide">
-              <img src="img/CompassChat_1.png">
-              Slide me
+          <div class="slide-group" style="-webkit-transition: 0.2s; transition: 0.2s; -webkit-transform: translate3d(0px, 0px, 0px);">
+            <div class="topimage">
+              <img src="img/CompassChat_1.png" class="topimage" />Slide Down
             </div>
-            <div class="slide">
-              <img src="img/CompassChat_2.png">
+            <div class="bottomimage">
+              <img src="img/CompassChat_1.png" class="bottomimage" />Slide Up
             </div>
           </div>
       </div>
