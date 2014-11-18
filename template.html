@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ratchet template page</title>
+
+    <!-- Sets initial viewport load and disables zooming  -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+    <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!-- Include the compiled Ratchet CSS -->
+    <link href="css/ratchet.css" rel="stylesheet">
+
+    <!-- Include the compiled Ratchet JS -->
+    <script src="js/ratchet.js"></script>
+	<style>
+	.slide > img {
+	width:375px;
+	height: 667px;
+	}
+</style>	
+<script type="text/javascript">
+function changeText(){
+	document.getElementById('headertitle').innerHTML = 'Hello Bro';
+}
+</script>
+  </head>
+  <body>
+
+    <!-- Make sure all your bars are the first things in your <body> -->
+    <header class="bar bar-nav">
+      <h1 id="headertitle" class="title" onclick="changeText();">Friends</h1>
+	  <a class="icon icon-plus pull-right"></a>
+    </header>
+
+    <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
+    <div class="content">
+      <div id="iwindow">
+        <div class="slider" id="mySlider">
+          <div class="slide-group" style="-webkit-transition: 0.2s; transition: 0.2s; -webkit-transform: translate3d(-642px, 0px, 0px);">
+            <div class="slide">
+              <img src="http://goratchet.com/assets/img/slide-1.jpg">
+                <span class="slide-text">
+                  <span class="icon icon-left-nav"></span>
+                  Slide me
+                </span>
+            </div>
+            <div class="slide">
+              <img src="http://goratchet.com/assets/img/slide-2.jpg">
+            </div>
+            <div class="slide">
+              <img src="http://goratchet.com/assets/img/slide-3.jpg">
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+    
+    <!-- Icons in standard bar fixed to the bottom of the screen -->
+    <div class="bar bar-standard bar-footer">
+      <a class="icon icon-list pull-right"><span class="badge">4</span></a>
+    </div>
+
+  </body>
+</html>
