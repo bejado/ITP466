@@ -7,6 +7,8 @@
  * v2.0.2 designed by @connors.
  * =====================================================
  */
+ 
+
 /* ========================================================================
  * Ratchet: modals.js v2.0.2
  * http://goratchet.com/components#modals
@@ -792,7 +794,7 @@
     resistance = slideNumber === 0         && deltaX > 0 ? (pageX / sliderWidth) + 1.25 :
                  slideNumber === lastSlide && deltaX < 0 ? (Math.abs(pageX) / sliderWidth) + 1.25 : 1;
 
-    slider.style.webkitTransform = 'translate3d(' + offsetX + 'px,0,0)';
+    slider.style.webkitTransform = 'translate3d(0,' + offsetX + 'px,0)';
   };
 
   var onTouchEnd = function (e) {
@@ -807,7 +809,7 @@
     offsetX = slideNumber * sliderWidth;
 
     slider.style['-webkit-transition-duration'] = '.2s';
-    slider.style.webkitTransform = 'translate3d(' + offsetX + 'px,0,0)';
+    slider.style.webkitTransform = 'translate3d(0,' + offsetX + 'px,0)';
 
     e = new CustomEvent('slide', {
       detail: { slideNumber: Math.abs(slideNumber) },
@@ -902,10 +904,10 @@
       return (handle.style.webkitTransform = 'translate3d(0,0,0)');
     }
     if (distanceX > offset) {
-      return (handle.style.webkitTransform = 'translate3d(' + offset + 'px,0,0)');
+      return (handle.style.webkitTransform = 'translate3d(0,' + offset + 'px,0)');
     }
 
-    handle.style.webkitTransform = 'translate3d(' + distanceX + 'px,0,0)';
+    handle.style.webkitTransform = 'translate3d(0,0)';
 
     toggle.classList[(distanceX > (toggleWidth / 2 - handleWidth / 2)) ? 'add' : 'remove']('active');
   });
@@ -922,7 +924,7 @@
     var slideOn     = (!touchMove && !toggle.classList.contains('active')) || (touchMove && (distanceX > (toggleWidth / 2 - handleWidth / 2)));
 
     if (slideOn) {
-      handle.style.webkitTransform = 'translate3d(' + offset + 'px,0,0)';
+      handle.style.webkitTransform = 'translate3d(0,' + offset + 'px,0)';
     } else {
       handle.style.webkitTransform = 'translate3d(0,0,0)';
     }
