@@ -30,6 +30,11 @@
 	width:375px !important;
 }
 
+#inputname {
+	height:55px;
+	width:100%;
+	display:inline-block;
+}
 
 	input[type="text"] {
 	  display: inline-block;
@@ -76,20 +81,26 @@ ol, ul {
 
     <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
     <div class="content control-content" style="display:initial !important;>
-	<div class="slider" id="mySlider">
-		  <div class="slide-group">
-			<div class="slide">
-			  <img src="img/Compass-Ashish-1.png" />
-			</div>
-			<div id="conversation" class="slide">
-			  <img src="img/Chat-Ashish-2.png" />
-			</div>
-		  </div>
-	</div>
+		<div class="slider" id="mySlider">
+			  <div class="slide-group">
+				<div class="slide">
+				  <img src="img/Compass-Ashish-1.png" />
+				</div>
+				<div id="conversation" class="slide">
+				  <img src="img/Chat-Ashish-2.png" />
+				</div>
+			  </div>
+		</div>
     </div>
-
   </div>
-    
+<section id="inputname">
+  <ul class="input-list style-1 clearfix">
+	<li>
+	  To:<input type="text" placeholder="Name">
+	</li>
+  </ul>
+</section>
+
   <!-- Icons in standard bar fixed to the bottom of the screen -->
   <div class="bar bar-standard bar-footer">
     <a href="conversation_select.html" data-transition="slide-in" class="icon icon-list pull-right"></a>
